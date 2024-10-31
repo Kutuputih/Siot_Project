@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siram Paksa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="dekstop_nav">
+      <div class="logo">
+        <a href="#"><img src="asset/Logo_Siot.png" alt="SIOTICS" /></a>
+      </div>
+      <ul class="nav_link">
+        <li><a href="#">Status</a></li>
+        <li><a href="#">Logs</a></li>
+        <li><a href="#">Clock</a></li>
+      </ul>
+    </nav>
+
+    <nav class="mobile_nav">
+      <div class="logo_2">
+        <a href="#"><img src="asset/Logo_Siot.png" alt="SIOTICS" /></a>
+      </div>
+      <div class="burger" id="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <ul class="nav_link">
+        <li><a href="#">Status</a></li>
+        <li><a href="#">Logs</a></li>
+        <li><a href="#">Clock</a></li>
+      </ul>
+    </nav>
+
+    <!-- head -->
+    <header>
+      <div class="con_img">
+        <img src="asset/Watering.jpg" alt="" />
+      </div>
+      <div class="container">
+        <p>Device ID :</p>
+        <h1>ESP32 94302</h1>
+        <div id="status">
+          <span class="green-dot"></span> <span>ESP32 Status: Connected</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="log-history">
+      <h2>Log History</h2>
+      <ul id="logs">
+        <li>09:30 AM - Hose Opened</li>
+        <li>10:00 AM - Rain Detected</li>
+        <!-- More logs here -->
+      </ul>
+    </section>
+    <section id="live-status">
+      <h2>Current Status</h2>
+      <div id="rain-status">
+        <span class="status-dot rain"></span> Rain Detector: Active
+      </div>
+    </section>
+
+    <footer>
+      <p>Project by :></p>
+    </footer>
+  </body>
+</html>
