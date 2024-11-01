@@ -7,8 +7,9 @@
 body {
   background-color: #f1f8e9;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
 }
+/* dekstop nav */
 
 .dekstop_nav {
   display: flex;
@@ -19,6 +20,9 @@ body {
   height: 2.4em;
   padding: 0 1rem;
   display: none;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
 }
 
 .dekstop_nav .logo img {
@@ -36,7 +40,8 @@ body {
   text-decoration: none;
   color: black;
 }
-/*  */
+
+/* mobile nav */
 
 .mobile_nav {
   display: flex;
@@ -45,6 +50,9 @@ body {
   color: black;
   justify-content: space-between;
   padding-inline: 12px;
+  position: sticky;
+  top: 0px;
+  z-index: 998;
 }
 
 .logo_2 img {
@@ -72,21 +80,32 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 60px;
-  right: 0px;
+  top: 25px;
+  right: 25px;
   border: 2px solid black;
   border-radius: 5px;
   width: 200px;
   z-index: 999;
+  gap: 0rem;
+  display: none;
+  background-color: rgb(240, 236, 236);
+}
+
+hr {
+  border: 1px solid black;
 }
 
 .mobile_nav .nav_link li {
   padding: 10px 15px;
+  text-align: center;
+}
+
+.mobile_nav .nav_link li a {
   text-decoration: none;
   color: black;
 }
 
-/*  */
+/*Header */
 
 header {
   color: white;
@@ -129,27 +148,51 @@ header {
   background-color: red;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 4px;
+  margin-left: 4px;
 }
 
-#log-history {
+/* logs */
+
+.log-history {
   margin: 1em;
   padding: 1em;
   background-color: white;
   border-radius: 8px;
 }
 
-#logs {
+.logs {
   list-style: none;
   max-height: 200px;
   overflow-y: auto;
 }
 
+/* status */
+
+.live-status {
+  margin: 1em;
+  padding: 1em;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* footer */
+
 footer {
   text-align: center;
   padding: 1em;
   font-size: 0.9em;
-  color: #666;
+  color: #f1f8e9;
+  background-color: #333;
+}
+
+.show {
+  display: flex !important;
+}
+
+li a:hover {
+  color: grey !important;
+  text-decoration: underline !important;
 }
 
 /* dekstop responsive */
@@ -165,7 +208,7 @@ footer {
   }
 
   .mobile_nav {
-    display: ;
+    display: none;
   }
 
   .con_img img {
@@ -183,5 +226,12 @@ footer {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
+  .dekstop_nav {
+    display: none;
+  }
+
+  .mobile_nav {
+    display: flex;
+  }
 }
