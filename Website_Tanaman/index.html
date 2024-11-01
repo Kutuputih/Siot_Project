@@ -46,10 +46,30 @@
         <p>Device ID :</p>
         <h1>ESP32 94302</h1>
         <div id="status">
-          <span class="green-dot"></span> <span>ESP32 Status: Connected</span>
+          <span id="color"></span>
+          <span
+            >ESP32 Status:
+            <span class="main_device_status">Disconnected</span></span
+          >
         </div>
       </div>
     </header>
+
+    <section class="live-status" id="status">
+      <h2>Status Sekarang</h2>
+      <div class="waktu">
+        <p>interval penyiraman : Setiap 2 Jam di menit ke 0</p>
+      </div>
+
+      <div class="rain-status">
+        <span class="status-dot rain"></span>
+        <p><span class="red-dot"></span>Pendeteksi Hujan : Tidak Aktif</p>
+      </div>
+      <div class="tanggal_Esp">
+        <p>Tanggal dan Jam dari Device :</p>
+        <p>14.00 31 October 2024</p>
+      </div>
+    </section>
 
     <section class="log-history" id="log">
       <h2>Log History</h2>
@@ -61,18 +81,6 @@
         <li>09:30 AM - Hose Opened</li>
         <li>10:00 AM - Rain Detected</li>
       </ul>
-    </section>
-    <section class="live-status" id="status">
-      <h2>Status Sekarang</h2>
-      <div class="waktu"><p>Lama waktu penyiraman : 2 Jam</p></div>
-      <div class="rain-status">
-        <span class="status-dot rain"></span>
-        <p><span class="red-dot"></span>Pendeteksi Hujan : Tidak Aktif</p>
-      </div>
-      <div class="tanggal_Esp">
-        <p>Tanggal dan Jam dari Device :</p>
-        <p>14.00 31 October 2024</p>
-      </div>
     </section>
 
     <footer>
