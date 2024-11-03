@@ -15,5 +15,17 @@ function updateDeviceStatus() {
   }
 }
 
-updateDeviceStatus(); // Call the function to execute it
+var watering_status = document.querySelector(".watering-status");
+
+function updateWateringStatus() {
+  if (watering_status.textContent === "Watering") {
+    document.querySelector(".water-container").classList.remove("hide");
+  } else {
+    document.querySelector(".water-container").classList.add("hide");
+  }
+}
+
+updateWateringStatus();
+updateDeviceStatus();
 console.log(device_status.textContent);
+console.log(watering_status.textContent);

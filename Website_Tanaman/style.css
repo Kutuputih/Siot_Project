@@ -133,6 +133,7 @@ header {
   }
 }
 
+/* dots */
 .green-dot {
   height: 10px;
   width: 10px;
@@ -150,6 +151,59 @@ header {
   display: inline-block;
   margin-right: 4px;
   margin-left: 4px;
+}
+
+/* watering */
+
+@keyframes waterDrop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+.water-container {
+  position: relative;
+  z-index: 999;
+  width: 100px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.water-drop {
+  position: absolute;
+  width: 4px;
+  height: 12px;
+  left: 10px;
+  background-color: #1ca3ec;
+  border-radius: 50%;
+  animation: waterDrop 1s infinite;
+}
+
+.water-drop:nth-child(2) {
+  left: 5px;
+  animation-delay: 0.2s;
+}
+.water-drop:nth-child(3) {
+  left: 15px;
+  animation-delay: 0.4s;
+}
+
+.water-drop:nth-child(4) {
+  left: 8px;
+  animation-delay: 0.6s;
+}
+.water-drop:nth-child(5) {
+  left: 0px;
+  animation-delay: 0.8s;
+}
+
+.hide {
+  display: none;
 }
 
 /* logs */
