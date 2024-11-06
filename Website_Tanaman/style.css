@@ -131,6 +131,20 @@ header {
     left: 45%;
     transform: translate(-50%, -50%);
   }
+
+  .siram {
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: #1ca3ec;
+    border: 0px;
+    text-shadow: 0px;
+    cursor: pointer;
+  }
+
+  .siram:hover {
+    transform: scale(1.1);
+  }
 }
 
 /* dots */
@@ -151,6 +165,33 @@ header {
   display: inline-block;
   margin-right: 4px;
   margin-left: 4px;
+}
+
+.yellow-dot {
+  height: 10px;
+  width: 10px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+/* loading */
+.dot_loading {
+  width: 60px;
+  clip-path: inset(0 100% 0 0);
+  animation: dot 1s steps(4) infinite;
+  display: none;
+}
+
+.show2 {
+  display: inline !important ;
+}
+@keyframes dot {
+  to {
+    clip-path: inset(0 -34% 0 0);
+  }
 }
 
 /* watering */
