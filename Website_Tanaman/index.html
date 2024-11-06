@@ -46,11 +46,13 @@
         <p>Device ID :</p>
         <h1>ESP32 94302</h1>
         <div id="status">
-          <span id="color"></span>
+          <span id="color" class="red-dot"></span>
           <span
-            >ESP32 Status: <span class="main_device_status">Connected</span>
+            >ESP32 Status: <span class="main_device_status">Connecting</span
+            ><span class="dot_loading">...</span>
 
-            <span class="watering-status">Watering</span> </span
+            <span class="watering-status"></span
+            ><!-- tulis Watering nya diatas--> </span
           >&nbsp;&nbsp;
           <span class="water-container hide">
             <span class="water-drop"></span>
@@ -60,6 +62,7 @@
             <span class="water-drop"></span>
           </span>
         </div>
+        <button class="siram" onclick="siram()">Siram!!!</button>
       </div>
     </header>
 
@@ -78,6 +81,8 @@
         <p>14.00 31 October 2024</p>
       </div>
     </section>
+
+    <section class=""></section>
 
     <section class="log-history" id="log">
       <h2>Log History</h2>
