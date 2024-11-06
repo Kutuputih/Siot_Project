@@ -5,13 +5,18 @@ document.getElementById("burger").addEventListener("click", function () {
 
 var device_status = document.querySelector(".main_device_status");
 
+document
+  .querySelector("#color")
+  .classList.remove("red-dot", "yellow-dot", "green-dot");
+
 function updateDeviceStatus() {
   if (device_status.textContent === "Connected") {
     document.querySelector("#color").classList.add("green-dot");
-    document.querySelector("#color").classList.remove("red-dot");
+  } else if (device_status.textContent === "Connecting") {
+    document.querySelector("#color").classList.add("yellow-dot");
+    document.querySelector(".dot_loading").classList.add("show2");
   } else {
     document.querySelector("#color").classList.add("red-dot");
-    document.querySelector("#color").classList.remove("green-dot");
   }
 }
 
@@ -23,6 +28,10 @@ function updateWateringStatus() {
   } else {
     document.querySelector(".water-container").classList.add("hide");
   }
+}
+
+function siram() {
+  document.getElementsByClassName("watering-status").innerHTML = "Watering";
 }
 
 updateWateringStatus();
